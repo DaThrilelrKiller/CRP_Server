@@ -167,8 +167,6 @@ _variables = [
 	["Licenses_name",0,0],
 	["Licenses_check",0,0],
 	["Roads_near",0,0],
-	["ID_generate",0,0],
-	["ID_setFace",0,0],
 	["ID_show",0,0],
 	["Chat_commands",0,0],
 	["Chat_tag",0,0],
