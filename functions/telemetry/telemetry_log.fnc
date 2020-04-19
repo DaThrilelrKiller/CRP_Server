@@ -1,3 +1,4 @@
+telemetry_log = {
 _str = "";
 
 {
@@ -7,3 +8,4 @@ _str = "";
 
 diag_log text _str;
 systemchat _str;
+};

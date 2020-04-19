@@ -7,7 +7,6 @@ _value = _this select 3;
 
 _uid = getPlayerUid _unit;
 
-
 [format["%1 - %2","Whitelist",_uid], "Whitelist", _whitelist, _value] call s_stats_write;
 
 [_unit,_this,"whitelist_recive",false,false]call network_MPExec;

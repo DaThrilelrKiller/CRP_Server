@@ -1,3 +1,4 @@
+telemetry_collect = {
 if (typeName _this == "ARRAY")then {
 	_unit = _this select 0;
 	_unit = if (isNull _unit)then {"ALL"}else{_unit};
@@ -39,4 +40,5 @@ if (typeName _this == "ARRAY")then {
 		];
 	};
 	[_this,_data,"telemetry_log",false,true]call network_MPExec;
+};
 };

@@ -9,7 +9,10 @@ _config = call compile preprocessFile "\MPMissions\mission.template";
 
 {
 	/*default init*/
-	_init = "";
+	_init = _this select 4;
+	if (isNil "_init")then {
+		_init = "";
+	};
 
 	_object = createVehicle [(_x select 1), [0,0,0], [], 0, "CAN_COLLIDE"];
 	_object setDir (_x select 3);
