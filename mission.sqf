@@ -8,12 +8,7 @@
 _config = call compile preprocessFile "\MPMissions\mission.template";
 
 {
-	/*default init*/
-	_init = _this select 4;
-	if (isNil "_init")then {
-		_init = "";
-	};
-
+	_init = "";
 	_object = createVehicle [(_x select 1), [0,0,0], [], 0, "CAN_COLLIDE"];
 	_object setDir (_x select 3);
 	_object setPosASL (_x select 2);
@@ -35,6 +30,11 @@ _config = call compile preprocessFile "\MPMissions\mission.template";
 	
 	if (_init != "")then {
 		_object setVehicleInit _init;
+	};
+	
+	if ((_x select 1)isKindOf "ReammoBox" && {_x select 1 != "fire_box"})then {
+		clearWeaponCargoGlobal _object;
+		clearMagazineCargoGlobal _object;
 	};
 	
 	_object lock true;
