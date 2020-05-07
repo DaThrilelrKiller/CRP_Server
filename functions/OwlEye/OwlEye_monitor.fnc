@@ -58,7 +58,6 @@ _variables = [
 	["Whitelist_recive",0,0],
 	["Whitelist_canopen",0,0],
 	["Stats_load",0,0],
-	["Stats_retrivevehicleland",0,0],
 	["Stats_save",0,0],
 	["Stats_savevehicle",0,0],
 	["Stats_markers",0,0],

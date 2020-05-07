@@ -20,4 +20,6 @@ if !(isNil "_result")then
 };
 
 _data = [_data,_default] call s_stats_datarizer;
+
+if (isNil "_data")exitWith {_default};
 _data;

@@ -1,5 +1,4 @@
 dtk_houses = [];
-dtk_locked = [];
 
 DTK_NotHouses = [
 "Land_Hangar_2",
@@ -8,5 +7,3 @@ DTK_NotHouses = [
 "Land_Hlidac_budka",
 "Land_Shed_wooden"
 ];
-
-publicVariable "dtk_locked";

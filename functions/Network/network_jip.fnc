@@ -6,9 +6,9 @@ _side = _this select 1;
 {
 	_object = _this select 0;
 	if (isNull _object)then {
-		DTK_ActionsJIP set [_forEachIndex,""];
-		DTK_ActionsJIP = DTK_ActionsJIP - [""];
-	}else{
-		[_client,_x,"network_addAction",false,false]call network_MPExec;
+		DTK_Sync set [_forEachIndex,""];
+		DTK_Sync = DTK_Sync - [""];
 	};
-}forEach DTK_ActionsJIP;
+}forEach DTK_Sync;
+
+[_client,DTK_Sync,"network_JipRecive",false,false]call network_MPExec;

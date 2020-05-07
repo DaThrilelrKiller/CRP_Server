@@ -1,9 +1,9 @@
 for "_i" from 0 to 1 step 0 do {
 	
 	sleep 900;
-	_ems = playersNumber resistance;
+	_ems = ["a2l_firefighter1","a2l_firefighter","hazmatRed","hazmatYellow"]call core_typeOnline;
 
-	if (_ems > 0)then {
+	if (_ems > 1)then {
 		_num = floor (random (5));	
 		if (_num == 0) then
 		{
@@ -11,7 +11,7 @@ for "_i" from 0 to 1 step 0 do {
 		};
 		if (_num == 1) then
 		{
-			[]spawn s_ems_gasleak;
+			[]spawn s_ems_spill;
 		};
 		if (_num == 2) then
 		{
