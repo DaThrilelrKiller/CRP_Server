@@ -21,6 +21,7 @@ dtk_server_modules =
 "Drug",
 "Vault",
 "Gallery",
+"Lab",
 "OwlEye"
 ];
 

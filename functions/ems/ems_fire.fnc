@@ -2,7 +2,11 @@ private ["_building","_markers","_name","_city"];
 
 if ([]call ems_activeMission)exitWith {};
 
-_building = []call s_ems_getBuilding;
+if (typename _this == "OBJECT")then {
+	_building = _this;
+}else{
+	_building = []call s_ems_getBuilding;
+};
 dtk_FirePostions = _building call core_buildingPostions;
 _markers = ["FIRE!!",80,"ColorYellow",getPos _building]call ems_createMarker;
 _name = _building call core_getName;
